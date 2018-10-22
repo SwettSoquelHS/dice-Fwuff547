@@ -1,15 +1,41 @@
-Die rDie;
+Die Die1;
+Die Die2;
+Die Die3;
+Die Die4;
+Die Die5;
+Die Die6;
+Die Die7;
+Die Die8;
+Die Die9;
+
 void setup(){
   //no loop means that draw is only called once
   //OR if you ever call redraw()
   size(600, 600);
   noLoop();
-  rDie = new Die(width/2, height/ 2);
+  Die1 = new Die(width/2, height/ 2);
+  Die2 = new Die(width/2-75, height/ 2);
+  Die3 = new Die(width/2+75, height/ 2);
+  Die4 = new Die(width/2, height/ 2-75);
+  Die5 = new Die(width/2, height/ 2+75);
+  Die6 = new Die(width/2+75, height/ 2-75);
+  Die7 = new Die(width/2-75, height/ 2+75);
+  Die8 = new Die(width/2-75, height/ 2-75);
+  Die9 = new Die(width/2+75, height/ 2+75);
+  
 }
 
 void draw(){
   background(0);
-  rDie.show();
+  Die1.show();
+  Die2.show();
+  Die3.show();
+  Die4.show();
+  Die5.show();
+  Die6.show();
+  Die7.show();
+  Die8.show();
+  Die9.show();
   
   //your code here
 }
