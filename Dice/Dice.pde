@@ -51,7 +51,7 @@ void mousePressed(){
 //Dice: Models a single 6 sided dice cube
 //Each instance should randomly assign itself a value from 1 to 6
 class Die {
-  int x_pos, y_pos;
+  int x_pos, y_pos, result, num;
 	//variable declarations for your Die instances here
 	
 	//constructor
@@ -63,6 +63,7 @@ class Die {
 	
 	//Simulate a roll of a die
 	void roll(){
+    result = (int)Math.random()*7+1;
 		//your code here, 
 		//should randomly assign a value from 1 to 6
 	}
@@ -76,7 +77,38 @@ class Die {
     fill(225);
     rect(-25, -25, 50, 50);
     fill(0);
-    ellipse(0, 0, 10, 10);
+    if (result == 1)
+      ellipse(0, 0, 10, 10);
+    if (result == 2) {
+      ellipse(-15, -15, 10, 10);
+      ellipse(15, 15, 10, 10);
+    }
+    if (result == 3){
+      ellipse(0, 0, 10, 10);
+      ellipse(-15, -15, 10, 10);
+      ellipse(15, 15, 10, 10);
+    }
+    if (result == 4) {
+      ellipse(-15, -15, 10, 10);
+      ellipse(15, 15, 10, 10);
+      ellipse(15, -15, 10, 10);
+      ellipse(15, -15, 10, 10);
+    }
+    if (result == 5) {
+      ellipse(0, 0, 10, 10);
+      ellipse(-15, -15, 10, 10);
+      ellipse(15, 15, 10, 10);
+      ellipse(15, -15, 10, 10);
+      ellipse(15, -15, 10, 10);
+    }
+    if (result == 6) {
+      ellipse(-15, 0, 10, 10);
+      ellipse(15, 0, 10, 10);
+      ellipse(-15, -15, 10, 10);
+      ellipse(15, 15, 10, 10);
+      ellipse(15, -15, 10, 10);
+      ellipse(15, -15, 10, 10);
+    }
     popMatrix();
 		//your code here
 	}
