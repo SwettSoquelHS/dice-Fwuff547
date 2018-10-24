@@ -31,7 +31,7 @@ void setup(){
 
 void draw(){
   total = 0;
-  background(0);
+  background((int)(Math.random()*300), (int)(Math.random()*300), (int)(Math.random()*300));
   Die1.show();
   total = total + Die1.result;
   Die2.show();
@@ -94,10 +94,9 @@ class Die {
     roll();
     pushMatrix();
     translate(x_pos, y_pos);
-    fill(225);
+    fill((int)(Math.random()*300), (int)(Math.random()*300), (int)(Math.random()*300));
     rect(-25, -25, 50, 50);
-    fill(0);
-    print(result);
+    fill((int)(Math.random()*300), (int)(Math.random()*300), (int)(Math.random()*300));
     if (result == 1){
       ellipse(0, 0, 10, 10);
     }
